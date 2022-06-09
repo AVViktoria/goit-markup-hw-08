@@ -1,0 +1,35 @@
+/*
+============================
+| About section / Особенности компании
+============================
+*/
+
+.about__list {
+  @include display-flex(center);
+  margin-left: auto;
+}
+
+.about__item {
+  margin-right: 30px;
+  width: 270px;
+
+  &:last-child {
+  margin-right: 0;
+}}
+
+.about__icon-group {
+  @include display-flex(center, center);
+  margin-bottom: 30px;
+  border-radius: 4px;
+  height: 120px;
+  background-color: var(--secondary-bg-cl);
+}
+
+.about__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.about__text {
+  line-height: 1.7;
+}
