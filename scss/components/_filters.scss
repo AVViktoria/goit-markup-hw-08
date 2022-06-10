@@ -6,12 +6,23 @@ Portfolio
 */
 
 .filters__list {
-  @include display-flex(center, center);
+  @include display-flex(center);
+
+
+  @media screen and (min-width: 480px){
+    flex-wrap: wrap;
+
+  }
+  @media screen and (min-width: 768px){
+    @include display-flex(center, center);
+    flex-wrap: nowrap;
+  }
+  
 }
 
 .filters__item {
   margin-right: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-right: 0px;
@@ -19,6 +30,10 @@ Portfolio
   &:hover,
   &:focus {
     box-shadow: var(--accent-bcg-shadow);
+  }
+
+  @media screen and (min-width: 768px){
+    margin-bottom: 50px;
   }
 }
 

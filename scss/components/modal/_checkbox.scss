@@ -33,8 +33,14 @@
 }}
 
 .checkbox__text {
-  @include fonts(14px, 1.71, 0.03em);
+  @include fonts(12px, 1.71, 0.03em);
   color: var(--main-txt-cl);
+  // @media screen and (min-width: 480px)
+  // {font-size: 12px;}
+  
+
+  // @media screen and (min-width: 1040px){
+  //   @include fonts(14px, 1.71, 0.03em);}
 }
 
 .checkbox__link {

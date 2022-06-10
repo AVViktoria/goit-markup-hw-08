@@ -6,8 +6,7 @@
 
 .social-icons__list {
   @include display-flex(center, center);
-  padding-right: 32px;
-  padding-left: 32px;
+  padding-left: 0; 
   list-style-type: none;
 }
 
