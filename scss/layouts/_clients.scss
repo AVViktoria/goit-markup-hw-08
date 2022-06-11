@@ -5,10 +5,18 @@
 */
 
 .clients {
-  // padding: 94px 0;
-  // padding: 0;
+ padding: 0;
   background-color: var(--main-white-cl);
 
+  @media screen and (min-width: 480px){
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  
+  @media screen and (min-width: 1140px){   
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
 }
 
 .clients__title {
