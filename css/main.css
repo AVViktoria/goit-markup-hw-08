@@ -756,10 +756,9 @@ Portfolio
 ============================
 */
 .about__list {
-  display: block;
   text-align: center;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -771,6 +770,7 @@ Portfolio
         flex-wrap: wrap;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    text-align: left;
   }
 }
 
@@ -792,6 +792,10 @@ Portfolio
   margin-bottom: 30px;
 }
 
+.about__item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .about__item {
     width: 354px;
@@ -802,12 +806,16 @@ Portfolio
   .about__item:last-child {
     margin-left: 30px;
   }
+  .about__item:nth-child(3) {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1140px) {
   .about__item {
     margin-right: 30px;
     width: 270px;
+    margin-bottom: 0;
   }
   .about__item:last-child {
     margin-right: 0;
@@ -838,6 +846,7 @@ Portfolio
 
 .about__text {
   line-height: 1.7;
+  text-align: left;
 }
 
 /*
@@ -1065,6 +1074,15 @@ Portfolio
   }
 }
 
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.section-title {
+  margin-bottom: 25px;
+}
+
 .clients__title {
   font-style: normal;
   line-height: 1.17;
@@ -1128,33 +1146,30 @@ Portfolio
 }
 
 @media screen and (min-width: 480px) {
-  .clients__item:nth-child(2n+1) {
-    margin-right: 30px;
+  .clients__item {
+    width: calc((100% - 4 * 10px)/2);
+    margin: 10px;
   }
-  .clients__item:nth-child(-n+4) {
-    margin-bottom: 30px;
+  .clients__item:nth-child(5) {
+    margin-bottom: 0;
+  }
+  .clients__item:nth-child(6) {
+    margin-bottom: 0px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .clients__item:nth-child(2) {
-    margin-right: 30px;
-  }
-  .clients__item:nth-child(3) {
-    margin-right: 0;
+  .clients__item {
+    width: calc((100% - 6 * 10px)/3);
   }
   .clients__item:nth-child(4) {
-    margin-right: 30px;
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1140px) {
-  .clients__item:nth-child(-n+3) {
+  .clients__item {
     margin-bottom: 0;
-  }
-  .clients__item:nth-child(3) {
-    margin-right: 30px;
   }
 }
 
@@ -1168,7 +1183,6 @@ Portfolio
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 92px;
   fill: var(--main-fill-light);
   cursor: pointer;
