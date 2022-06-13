@@ -5,20 +5,33 @@
 */
 
 .socials {
-  display: block;
-  margin-right: 93px;
+  padding: 0%;
+ 
+  @media screen and (min-width: 480px){
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 60px;
+     }    
+
+     @media screen and (min-width: 1140px){
+      margin-right: 93px;
+      margin-bottom: 0;
+     }
 }
 
 .socials__title {
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
   font-style: normal;
   @include fonts(14px, 1.14);
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-white-cl);
-  
+
+  @media screen and (min-width: 1140px){
+    text-align: left;
+   }
 }
 
 .socials__list {

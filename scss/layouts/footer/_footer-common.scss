@@ -8,24 +8,27 @@
   padding-top: 60px;
   padding-bottom: 57px;
   background-color: var(--dark-bg-cl);
-
-  @media screen and (min-width: 480px){
-    width: 480px;
-  }
-  @media screen and (min-width: 768px){
-    width: 768px;
-  }
-  @media screen and (min-width: 1140px){
-    width: 1140px;
-  }
 }
 
-.footer__holder {
-  @include display-flex(baseline);
-  width: 1200px;
+.footer__holder{
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px){
+ text-align: center;
+ 
+  }
+  @media screen and (min-width: 768px){
+display: flex;
+flex-wrap: wrap;
+justify-content: baseline;
+  }
+  @media screen and (min-width: 1140px){
+    @include display-flex(baseline);
+    flex-wrap: nowrap; 
+    justify-content: center
+}
 }
 

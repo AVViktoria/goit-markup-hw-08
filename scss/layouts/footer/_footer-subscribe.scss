@@ -5,11 +5,28 @@
 */
 
 .subscribe-form {
-  @include display-flex(flex-end);
+  
+  @media screen and (min-width: 768px){
+  margin-right: auto;
+  margin-left: auto; 
+  }
+
+  @media screen and (min-width: 1140px){
+   @include display-flex(flex-end);
+  margin-right: 0;
+   margin-left: 0;
+   }
+ 
 }
 
 .subscribe-form__label {
-  margin-right: 12px;
+
+  @media screen and (min-width: 1140px){
+    margin-right: 12px;
+    margin-bottom: 0;
+    text-align: left;
+   }
+  
 }
 .subscribe-form__title {
   display: block;
@@ -40,7 +57,13 @@
 }
 
 .subscribe-form__btn {
- 
+ margin-top: 20px;
+ margin-right: auto;
+ margin-left: auto;
+@media screen and (min-width: 1140px){
+  margin: 0;
+  // align-items: flex-end;
+}
   &::after {
   content: '';
   width: 24px;
@@ -53,5 +76,8 @@
   &:hover,
   &:focus {
   background-color: var(--second-accent-cl);
-}}
+}
+
+
+}
 
