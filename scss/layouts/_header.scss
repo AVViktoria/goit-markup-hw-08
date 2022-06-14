@@ -7,10 +7,55 @@
 .header {
   border-bottom: 1px solid #ececec;
   background-color: var(--main-white-cl);
+
 }
 
 .header-container {
-  @include display-flex(center);
+  position: relative;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
+
+@media screen and (min-width: 768px){
+    @include display-flex(center);
+}
+}
+
+
+.nav-menu{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+
+@media screen and (min-width: 768px){
+    display: none;
+}
+}
+
+
+.nav-menu__icon{
+  fill: #000;
+
+}
+
+.nav{
+  @media screen and (max-width: 767px){
+    display: none;
+}
+@media screen and (min-width: 1200px){
+margin-right: auto;
+}
 }
 
 .nav__list {
@@ -19,11 +64,15 @@
 }
 
 .nav__item {
-  margin-right: 50px;
+
+@media screen and (min-width: 768px){
+margin-right: 50px;
 
   &:last-child {
-  margin-right: 0;
-}}
+    margin-right: 0;
+  }
+ }
+}
 
 
 .nav__link {
@@ -55,26 +104,48 @@
 }
   &--current {
   color: var(--accent-cl);
-}}
+}
+}
 
 .header-list {
+  @media screen and (max-width: 767px){
+    display: none;
+}
+  @media screen and (min-width: 768px){
+   display: block;
+   margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px){
   @include display-flex(center);
-  margin-left: auto;
+  margin-left: 0;
+}
 }
 
 .header-list__item {
+
+  @media screen and (min-width: 768px){
+  margin-bottom: 10px;
+
+  &:last-child {
+  margin-bottom: 0;
+  }
+}
+  @media screen and (min-width: 1200px){
   margin-right: 50px;
+  margin-bottom: 0;
 
   &:last-child {
   margin-right: 0;
+ }
 }
 }
 
 .header-list__link {
-  @include display-flex(center, center);
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
+  @include display-flex(center);
+
+  @media screen and (min-width: 768px){
+    font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color var(--main-animation);
@@ -85,7 +156,14 @@
   &:hover,
   &:focus {
   color: var(--accent-cl);
-}}
+}
+}
+  @media screen and (min-width: 1200px){
+    @include display-flex(center, center);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  }
+ }
 
 .header-list__icon {
   margin-right: 10px;

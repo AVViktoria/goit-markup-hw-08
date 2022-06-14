@@ -27,11 +27,18 @@
 
   <body class="page">
     <!-- Шапка сайта Header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
-        <a class="logo" lang="en" href="./index.html" aria-label="Логотип сайта"
+        <a class="logo logo-nav-menu" lang="en" href="./index.html" aria-label="Логотип сайта"
           >Web<span class="logo__accent-dark">Studio</span></a
         >
+
+        <button class="nav-menu" type="button">
+          <svg class="nav-menu__icon" width="24" height="24">
+            <use href="./images/icons.svg/icon-nav-menu.svg#icon-nav-menu"></use>
+          </svg>
+        </button>
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -68,15 +75,15 @@
       </div>
     </header>
 
-    <main> -->
+    <main>
       <!--Секция Герой Hero -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero__btn btn" type="button" data-modal-open>Заказать услугу</button> -->
+          <button class="hero__btn btn" type="button" data-modal-open>Заказать услугу</button>
 
           <!-- Модальное окно Modal form -->
-          <!-- <div class="backdrop is-hidden" data-modal>
+          <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <button class="modal__btn-close" data-modal-close>
                 <svg class="modal__icon-close" width="14" height="14">
@@ -145,7 +152,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- Секция Особенности компании About -->
       <!-- <section class="about section">
@@ -584,7 +591,7 @@
     </main> -->
 
     <!-- Подвал сайта Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="address footer__holder">
         <div class="address__container">
           <a class="address__logo logo" lang="en" aria-label="Логотип сайта" href="./index.html"
@@ -688,7 +695,7 @@
           <button class="subscribe-form__btn btn" type="submit">Подписаться</button>
         </form>
       </div>
-    </footer>
+    </footer> -->
     <script src="./js/modal.js"></script>
     <!-- <script>
       (() => {

@@ -1,4 +1,4 @@
-.checkbox {
+ .checkbox {
   @include display-flex(center, center);
   margin-bottom: 30px;
   cursor: pointer;
@@ -38,9 +38,9 @@
   // @media screen and (min-width: 480px)
   // {font-size: 12px;}
   
-
-  // @media screen and (min-width: 1040px){
-  //   @include fonts(14px, 1.71, 0.03em);}
+  @media screen and (min-width: 1140px){;
+  font-size: 14px;
+  line-height: 24px;}
 }
 
 .checkbox__link {
