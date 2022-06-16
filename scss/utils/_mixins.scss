@@ -1,3 +1,4 @@
+// Fonts
 @mixin fonts($fs, $lh, $ls: false) {
   font-size: $fs;
   line-height: $lh;
@@ -6,6 +7,7 @@
   }
 }
 
+// Display flex
 @mixin display-flex($ali, $jc: false) {
   display: flex;
   align-items: $ali;
@@ -13,6 +15,8 @@
     justify-content: $jc;
   }
 }
+
+// Images types
 
 @mixin mq($type) {
   $mobile: 480px;

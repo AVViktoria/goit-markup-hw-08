@@ -36,8 +36,6 @@
 .checkbox__text {
   @include fonts(12px, 1.71, 0.03em);
   color: var(--main-txt-cl);
-  // @media screen and (min-width: 480px)
-  // {font-size: 12px;}
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
