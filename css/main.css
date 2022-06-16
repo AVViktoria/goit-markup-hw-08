@@ -58,6 +58,10 @@ body {
   background-color: var(--main-white-cl);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .section {
   padding: 94px 0px;
 }
@@ -357,11 +361,13 @@ Portfolio
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   background-color: var(----backdrop-bg-cl);
   opacity: 1;
-  z-index: 10;
+  z-index: 100;
   -webkit-transition: opacity var(--main-animation), visibility var(--main-animation);
   transition: opacity var(--main-animation), visibility var(--main-animation);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -389,7 +395,7 @@ Portfolio
   transition: opacity var(--main-animation), visibility var(--main-animation);
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .modal {
     position: absolute;
     padding: 0;
@@ -438,7 +444,7 @@ Portfolio
   margin-top: 0;
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .modal-form {
     position: absolute;
     margin: 40px;
@@ -501,7 +507,7 @@ Portfolio
   border-color: var(--accent-cl);
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .modal-form__input {
     display: block;
     margin: 0;
@@ -596,7 +602,7 @@ Portfolio
   color: var(--main-txt-cl);
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .checkbox__text {
     font-size: 14px;
     line-height: 24px;
@@ -607,38 +613,13 @@ Portfolio
   color: var(--accent-cl);
 }
 
-/*
-============================
-| Header section / Шапка сайта
-============================
-*/
-.header {
-  border-bottom: 1px solid #ececec;
-  background-color: var(--main-white-cl);
-}
-
-.header-container {
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
-  .header-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 .nav-menu {
   position: absolute;
   top: 10px;
   right: 15px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,14 +629,16 @@ Portfolio
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
   width: 40px;
   height: 40px;
-  background-color: #fff;
   cursor: pointer;
-  border: none;
-  background-color: transparent;
+  -webkit-transition: opacity var(--main-animation), visibility var(--main-animation);
+  transition: opacity var(--main-animation), visibility var(--main-animation);
   z-index: 10;
+}
+
+.nav-menu:hover, .nav-menu:focus {
+  fill: var(--accent-cl);
 }
 
 @media screen and (min-width: 768px) {
@@ -664,13 +647,58 @@ Portfolio
   }
 }
 
-.nav-menu__icon {
-  fill: #000;
+.nav-menu.is-open .nav-menu__icon-cross {
+  display: none;
+}
+
+.nav-menu.is-open .nav-menu__icon-menu {
+  display: block;
+}
+
+.nav-menu__icon-menu {
+  display: none;
+}
+
+.menu-container {
+  background-color: #fff;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 48px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .nav {
-    display: none;
+    margin-bottom: 302px;
   }
 }
 
@@ -688,6 +716,16 @@ Portfolio
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__list {
+    display: block;
+    margin-bottom: 32px;
+  }
+  .nav__list:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -729,55 +767,82 @@ Portfolio
   transition: color var(--main-animation);
 }
 
+@media screen and (max-width: 767px) {
+  .nav__link--current::after {
+    display: none;
+  }
+}
+
 .nav__link--current {
   color: var(--accent-cl);
 }
 
 @media screen and (max-width: 767px) {
-  .header-list {
-    display: none;
+  .nav__link {
+    font-size: 40px;
+    line-height: 1.17;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-contacts {
+    margin-top: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header-list {
+  .menu-contacts {
     display: block;
-    margin-left: auto;
+    margin-left: 84px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-list {
+  .menu-contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 0;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-contacts__item {
+    margin-bottom: 32px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header-list__item {
+  .menu-contacts__item {
     margin-bottom: 10px;
   }
-  .header-list__item:last-child {
+  .menu-contacts__item:last-child {
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-list__item {
+  .menu-contacts__item {
     margin-right: 50px;
     margin-bottom: 0;
   }
-  .header-list__item:last-child {
+  .menu-contacts__item:last-child {
     margin-right: 0;
   }
 }
 
-.header-list__link {
+.menu-contacts__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -787,23 +852,23 @@ Portfolio
 }
 
 @media screen and (min-width: 768px) {
-  .header-list__link {
+  .menu-contacts__link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     -webkit-transition: color var(--main-animation);
     transition: color var(--main-animation);
   }
-  .header-list__link--accent {
+  .menu-contacts__link--accent {
     color: var(--main-txt-cl);
   }
-  .header-list__link:hover, .header-list__link:focus {
+  .menu-contacts__link:hover, .menu-contacts__link:focus {
     color: var(--accent-cl);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-list__link {
+  .menu-contacts__link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -818,9 +883,105 @@ Portfolio
   }
 }
 
-.header-list__icon {
+.menu-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-contacts__icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .icon-envelope-hover {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--main-txt-cl);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .icon-phone-hover {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--accent-cl);
+  }
+}
+
+.menu-social {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0;
+    padding: 0;
+    margin-top: 64px;
+  }
+}
+
+.menu-social__item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu-social__item:first-child {
+  padding-left: 0;
+}
+
+.menu-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+@media screen and (max-width: 767px) {
+  .menu-social__link {
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-cl);
+  }
+}
+
+/*
+============================
+| Header section / Шапка сайта
+============================
+*/
+.header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+  background-color: var(--main-white-cl);
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 /*
@@ -857,7 +1018,7 @@ Portfolio
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.4;
@@ -898,7 +1059,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .about__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -935,7 +1096,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .about__item {
     margin-right: 30px;
     width: 270px;
@@ -1070,7 +1231,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .team__img {
     width: 270px;
     height: 260px;
@@ -1111,7 +1272,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1149,7 +1310,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .team__item {
     width: 270px;
     margin-right: 30px;
@@ -1197,7 +1358,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .clients {
     padding-bottom: 94px;
     padding-top: 94px;
@@ -1251,7 +1412,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .clients__list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -1277,7 +1438,7 @@ Portfolio
 
 @media screen and (min-width: 480px) {
   .clients__item {
-    width: calc((100% - 4 * 10px)/2);
+    width: calc((100% - 4 * 10px) / 2);
     margin: 10px;
   }
   .clients__item:nth-child(5) {
@@ -1290,14 +1451,14 @@ Portfolio
 
 @media screen and (min-width: 768px) {
   .clients__item {
-    width: calc((100% - 6 * 10px)/3);
+    width: calc((100% - 6 * 10px) / 3);
   }
   .clients__item:nth-child(4) {
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .clients__item {
     margin-bottom: 0;
   }
@@ -1355,7 +1516,7 @@ Portfolio
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .projects__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1384,12 +1545,12 @@ Portfolio
   .projects__item {
     width: calc((100% - 2 * 15px) / 2);
   }
-  .projects__item:nth-child(2n+1) {
+  .projects__item:nth-child(2n + 1) {
     margin-right: 30px;
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .projects__item {
     width: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
@@ -1500,10 +1661,10 @@ Portfolio
 }
 
 .footer__holder {
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -1571,13 +1732,13 @@ Portfolio
 }
 
 .address__logo {
-  padding: 0px;
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 480px) {
   .address__logo {
     margin-right: 0;
+    padding: 0px;
   }
 }
 
@@ -1609,7 +1770,7 @@ Portfolio
 ============================
 */
 .socials {
-  padding: 0%;
+  padding: 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -1646,14 +1807,14 @@ Portfolio
 }
 
 .socials__list {
-  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 0;
+  margin-right: 10px;
 }
 
 .socials__item:not(:last-child) {
-  margin-right: 10px;
+  padding-left: 0;
 }
 
 .socials__link {
@@ -1676,7 +1837,6 @@ Portfolio
 @media screen and (min-width: 768px) {
   .subscribe-form {
     margin-right: auto;
-    margin-left: auto;
     width: 100%;
   }
 }

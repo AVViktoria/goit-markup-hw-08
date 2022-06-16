@@ -5,6 +5,10 @@ body {
   background-color: var(--main-white-cl);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .section {
   padding: 94px 0px;
 }

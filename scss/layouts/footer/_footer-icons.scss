@@ -5,18 +5,18 @@
 */
 
 .socials {
-  padding: 0%;
- 
-  @media screen and (min-width: 480px){
+  padding: 0;
+
+  @media screen and (min-width: 480px) {
     margin-right: auto;
     text-align: center;
     margin-bottom: 60px;
-     }    
+  }
 
-     @media screen and (min-width: 1200px){
-      margin-right: 93px;
-      margin-bottom: 0;
-     }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
 }
 
 .socials__title {
@@ -29,24 +29,24 @@
   text-transform: uppercase;
   color: var(--main-white-cl);
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     text-align: left;
-   }
+  }
 }
 
 .socials__list {
-  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 0;
-}
-
-.socials__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.socials__link { 
-  background-color:  var(--accent-bg-cl);
+.socials__item:not(:last-child) {
+  padding-left: 0;
+}
+
+.socials__link {
+  background-color: var(--accent-bg-cl);
 }
 
 .socials__picture {

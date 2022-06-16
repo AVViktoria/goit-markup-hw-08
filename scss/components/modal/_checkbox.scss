@@ -1,4 +1,4 @@
- .checkbox {
+.checkbox {
   @include display-flex(center, center);
   margin-bottom: 30px;
   cursor: pointer;
@@ -26,21 +26,23 @@
   box-shadow: var(--accent-bcg-shadow);
 
   .checkbox__input:checked + & {
-  border-color: var(--accent-cl);
-  background-color: var(--accent-cl);
-  background-size: contain;
-  background-origin: border-box;
-}}
+    border-color: var(--accent-cl);
+    background-color: var(--accent-cl);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
 
 .checkbox__text {
   @include fonts(12px, 1.71, 0.03em);
   color: var(--main-txt-cl);
   // @media screen and (min-width: 480px)
   // {font-size: 12px;}
-  
-  @media screen and (min-width: 1140px){;
-  font-size: 14px;
-  line-height: 24px;}
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .checkbox__link {

@@ -27,50 +27,126 @@
 
   <body class="page">
     <!-- Шапка сайта Header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
-        <a class="logo" lang="en" href="./index.html" aria-label="Логотип сайта"
+        <a class="logo header-logo" lang="en" href="./index.html" aria-label="Логотип сайта"
           >Web<span class="logo__accent-dark">Studio</span></a
         >
-        <nav class="nav">
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link link" href="./index.html">Студия</a>
+        <!-- Мобильное меню Mobile-menu -->
+        <button
+          class="nav-menu is-open"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="nav-menu__icon"
+            width="24"
+            height="24"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="nav-menu__icon-cross"
+              href="./images/icons.svg/symbol-defs-opt.svg#icon-close-black"
+            ></use>
+            <use
+              class="nav-menu__icon-menu"
+              href="./images/icons.svg/icon-nav-menu.svg#icon-nav-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <ul class="menu-contacts list">
+            <li class="menu-contacts__item">
+              <a
+                class="menu-contacts__link menu-contacts__link--accent link icon-envelope-hover"
+                href="mailto:info@example.com"
+              >
+                <svg class="menu-contacts__icon icon" width="16" height="12">
+                  <use href="./images/icons.svg/symbol-defs-opt.svg#icon-envelope-hover"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--current link" href="./portfolio.html">Портфолио</a>
+            <li class="menu-contacts__item">
+              <a
+                class="menu-contacts__link icon-phone-hover menu-contacts__link--accent link"
+                href="tel:+380991111111"
+              >
+                <svg class="menu-contacts__icon icon" width="10" height="16">
+                  <use href="./images/icons.svg/symbol-defs-opt.svg#icon-phone-hover"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
           </ul>
-        </nav>
 
-        <ul class="header-list list">
-          <li class="header-list__item">
-            <a
-              class="header-list__link header-list__link--accent link"
-              href="mailto:info@example.com"
-            >
-              <svg class="header-list__icon" width="16" height="12">
-                <use href="./images/icons.svg/symbol-defs-opt.svg#icon-envelope-hover"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-list__item">
-            <a class="header-list__link header-list__link--accent link" href="tel:+380991111111">
-              <svg class="header-list__icon" width="10" height="16">
-                <use href="./images/icons.svg/symbol-defs-opt.svg#icon-phone-hover"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menu-social list">
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Инстаграм иконка"
+                lang="en"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Твитер иконка"
+                lang="en"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Фейсбук иконка"
+                lang="en"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Линкедин иконка"
+                lang="en"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </header> -->
-
+    </header>
     <main>
       <!-- Секция Фильтры Filters-->
-      <!-- <section class="filters section">
+      <section class="filters section">
         <div class="container">
           <h1 class="filters__title visually-hidden">Фильтры ссылки на страницы сайта</h1>
           <ul class="filters__list list">
@@ -90,10 +166,10 @@
               <button class="filters__btn btn" type="button">Маркетинг</button>
             </li>
           </ul>
-        </div> -->
+        </div>
 
         <!--Секция проекты Projects-->
-        <!-- <div class="projects container">
+        <div class="projects container">
           <ul class="projects__list list">
             <li class="projects__item">
               <a class="projects__icon-link link" href="">
@@ -316,12 +392,12 @@
               </a>
             </li>
           </ul>
-        </div> -->
+        </div>
       </section>
     </main>
 
     <!-- Подвал сайта Footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="address footer__holder">
         <div class="address__container">
           <a class="address__logo logo" lang="en" aria-label="Логотип сайта" href="./index.html"
@@ -339,16 +415,12 @@
                 >
               </li>
               <li class="address__item">
-                <a
-                  class="address__link address__link--accent link"
-                  href="mailto:info@example.com"
+                <a class="address__link address__link--accent link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <li class="address__item">
-                <a
-                  class="address__link address__link--accent link"
-                  href="tel:+380991111111"
+                <a class="address__link address__link--accent link" href="tel:+380991111111"
                   >tel:+38 099 111 11 11</a
                 >
               </li>
@@ -357,16 +429,16 @@
         </div>
         <div class="socials social-icons">
           <p class="socials__title social-icons__title"><b>Присоединяйтесь</b></p>
-          <ul class="socials__list social-icons__list ">
+          <ul class="socials__list social-icons__list">
             <li class="socials__item social-icons__item">
               <a
-                class="socials__link social-icons__link "
+                class="socials__link social-icons__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Фейсбук иконка"
               >
-                <svg class="socials__picture social-icons__picture ">
+                <svg class="socials__picture social-icons__picture">
                   <use href="./images/icons.svg/symbol-defs-opt.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -425,11 +497,7 @@
           <button class="subscribe-form__btn btn" type="submit">Подписаться</button>
         </form>
       </div>
-
-        
-          
-      
-    </footer> -->
+    </footer>
     <script src="./js/modal.js"></script>
     <!-- <script>
       (() => {

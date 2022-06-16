@@ -34,7 +34,7 @@ width: 360px;
 font-weight: 900;
 text-transform: uppercase;
 
-@media screen and (min-width: 1140px){
+@media screen and (min-width: 1200px){
   @include fonts(44px, 1.4);
   width: 670px;
 }}

@@ -29,49 +29,119 @@
     <!-- Шапка сайта Header-->
     <header class="header">
       <div class="container header-container">
-        <a class="logo logo-nav-menu" lang="en" href="./index.html" aria-label="Логотип сайта"
+        <a class="logo header-logo" lang="en" href="./index.html" aria-label="Логотип сайта"
           >Web<span class="logo__accent-dark">Studio</span></a
         >
-
-        <button class="nav-menu" type="button">
-          <svg class="nav-menu__icon" width="24" height="24">
-            <use href="./images/icons.svg/icon-nav-menu.svg#icon-nav-menu"></use>
+        <!-- Мобильное меню Mobile-menu -->
+        <button
+          class="nav-menu is-open"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="nav-menu__icon"
+            width="24"
+            height="24"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="nav-menu__icon-cross"
+              href="./images/icons.svg/symbol-defs-opt.svg#icon-close-black"
+            ></use>
+            <use
+              class="nav-menu__icon-menu"
+              href="./images/icons.svg/icon-nav-menu.svg#icon-nav-menu"
+            ></use>
           </svg>
         </button>
 
-        <nav class="nav">
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--current link" href="./index.html">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
-          </ul>
-        </nav>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--current link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
+            </ul>
+          </nav>
 
-        <ul class="header-list list">
-          <li class="header-list__item">
-            <a
-              class="header-list__link header-list__link--accent link"
-              href="mailto:info@example.com"
-            >
-              <svg class="header-list__icon icon" width="16" height="12">
-                <use href="./images/icons.svg/symbol-defs-opt.svg#icon-envelope-hover"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-list__item">
-            <a class="header-list__link header-list__link--accent link" href="tel:+380991111111">
-              <svg class="header-list__icon icon" width="10" height="16">
-                <use href="./images/icons.svg/symbol-defs-opt.svg#icon-phone-hover"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menu-contacts list">
+            <li class="menu-contacts__item">
+              <a
+                class="menu-contacts__link menu-contacts__link--accent link icon-envelope-hover"
+                href="mailto:info@example.com"
+              >
+                <svg class="menu-contacts__icon icon" width="16" height="12">
+                  <use href="./images/icons.svg/symbol-defs-opt.svg#icon-envelope-hover"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="menu-contacts__item">
+              <a
+                class="menu-contacts__link icon-phone-hover menu-contacts__link--accent link"
+                href="tel:+380991111111"
+              >
+                <svg class="menu-contacts__icon icon" width="10" height="16">
+                  <use href="./images/icons.svg/symbol-defs-opt.svg#icon-phone-hover"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+
+          <ul class="menu-social list">
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Инстаграм иконка"
+                lang="en"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Твитер иконка"
+                lang="en"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Фейсбук иконка"
+                lang="en"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-social__item">
+              <a
+                class="menu-social__link link"
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Линкедин иконка"
+                lang="en"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -155,7 +225,7 @@
       </section>
 
       <!-- Секция Особенности компании About -->
-      <!-- <section class="about section">
+      <section class="about section">
         <div class="container">
           <h2 class="section-title visually-hidden">Особенности компании</h2>
           <ul class="about__list list">
@@ -205,10 +275,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Секция чем мы занимаемся Gallery-->
-      <!-- <section class="gallery section">
+      <section class="gallery section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="gallery__list list">
@@ -262,10 +332,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Наша команда Team-->
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list list">
@@ -277,7 +347,7 @@
                 width="270"
                 height="260"
               />
-             <div class="social-icons"> 
+              <div class="social-icons">
                 <h3 class="social-icons__title">Игорь Демьяненко</h3>
                 <p class="social-icons__text" lang="en">Product Designer</p>
                 <ul class="social-icons__list">
@@ -531,9 +601,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Клиенты Clients-->
-      <!-- <section class="clients section">
+      <section class="clients section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients__list list">
@@ -588,10 +658,10 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>
 
     <!-- Подвал сайта Footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="address footer__holder">
         <div class="address__container">
           <a class="address__logo logo" lang="en" aria-label="Логотип сайта" href="./index.html"
@@ -609,16 +679,12 @@
                 >
               </li>
               <li class="address__item">
-                <a
-                  class="address__link address__link--accent link"
-                  href="mailto:info@example.com"
+                <a class="address__link address__link--accent link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <li class="address__item">
-                <a
-                  class="address__link address__link--accent link"
-                  href="tel:+380991111111"
+                <a class="address__link address__link--accent link" href="tel:+380991111111"
                   >tel:+38 099 111 11 11</a
                 >
               </li>
@@ -627,16 +693,16 @@
         </div>
         <div class="socials social-icons">
           <p class="socials__title social-icons__title"><b>Присоединяйтесь</b></p>
-          <ul class="socials__list social-icons__list ">
+          <ul class="socials__list social-icons__list">
             <li class="socials__item social-icons__item">
               <a
-                class="socials__link social-icons__link "
+                class="socials__link social-icons__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Фейсбук иконка"
               >
-                <svg class="socials__picture social-icons__picture ">
+                <svg class="socials__picture social-icons__picture">
                   <use href="./images/icons.svg/symbol-defs-opt.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -695,8 +761,9 @@
           <button class="subscribe-form__btn btn" type="submit">Подписаться</button>
         </form>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <!-- <script>
       (() => {
         document.querySelector('.js-speaker-form').addEventListener('.submit', e => {

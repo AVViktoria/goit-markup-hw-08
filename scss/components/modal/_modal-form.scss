@@ -4,30 +4,28 @@
 ============================
 */
 
-
 .modal-form {
-  
   text-align: center;
   // position: relative;
   // opacity: 1;
   // width: auto;
   margin-top: 0;
 
-@media screen and (min-width: 1140px){
-  position: absolute; 
-  margin: 40px;
-}
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    margin: 40px;
+  }
 }
 
 .modal-form__title {
-// display: block;
+  // display: block;
   // margin-right: auto;
   // margin-left: auto;
-//   margin-top: 0;
+  //   margin-top: 0;
   margin-bottom: 12px;
   font-weight: 700;
   @include fonts(20px, 1.15, 0.03em);
-  text-align: center; 
+  text-align: center;
   color: var(--title-txt-cl);
 }
 
@@ -39,8 +37,9 @@
 
   &:focus,
   &:hover {
-  fill: var(--accent-cl);
-}}
+    fill: var(--accent-cl);
+  }
+}
 
 .modal-form__text {
   display: block;
@@ -69,7 +68,7 @@
   // flex-direction: column;
   // justify-content: center;
   // margin-bottom: 10px;
-cursor: pointer;
+  cursor: pointer;
   border: 1px solid var(--main-border-cl);
   border-radius: 4px;
   outline: transparent;
@@ -77,21 +76,17 @@ cursor: pointer;
 
   &:hover,
   &:focus {
-  outline: none;
-  border-color: var(--accent-cl);}
-
-
-
-  @media screen and (min-width: 1140px){
-  display: block;
-  margin: 0;
-  font: inherit;
-  // width: 100%;
+    outline: none;
+    border-color: var(--accent-cl);
   }
-  
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin: 0;
+    font: inherit;
+    // width: 100%;
+  }
 }
-
-
 
 .modal-form__icon {
   position: absolute;
@@ -103,8 +98,9 @@ cursor: pointer;
   background-color: var(--main-white-cl);
 
   .modal-form__label:focus-within & {
-  fill: var(--accent-cl);
-}}
+    fill: var(--accent-cl);
+  }
+}
 
 .modal-form__input-comment {
   resize: none;
@@ -113,7 +109,6 @@ cursor: pointer;
   margin-bottom: 20px;
   @include fonts(12px, 1.17, 0.01em);
   color: var(--input-bg-cl);
- 
 }
 
 .modal-form__btn {
@@ -123,7 +118,6 @@ cursor: pointer;
 
   &:hover,
   &:focus {
-  background-color: var( --second-accent-cl);
-}}
-
-
+    background-color: var(--second-accent-cl);
+  }
+}

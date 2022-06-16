@@ -10,11 +10,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   background-color: var(----backdrop-bg-cl);
   opacity: 1;
-  z-index: 10;
+  z-index: 100;
   transition: opacity var(--main-animation), visibility var(--main-animation);
-
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -23,7 +24,7 @@
   visibility: hidden;
 }
 
-.modal { 
+.modal {
   position: absolute;
   padding: 0;
   top: 50%;
@@ -34,26 +35,23 @@
   width: 450px;
   border-radius: 4px;
   cursor: pointer;
- transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   border-radius: 4px;
   background-color: var(--main-white-cl);
-  box-shadow:var(--main-bcg-shadow);
+  box-shadow: var(--main-bcg-shadow);
   transition: opacity var(--main-animation), visibility var(--main-animation);
-  
-  @media screen and (min-width: 480px){
-  
- 
+
+  @media screen and (min-width: 480px) {
   }
 
-  @media screen and (min-width: 1140px){
-  position: absolute;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  height: 581px;
-  
-}
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn-close {
@@ -72,6 +70,6 @@
 
   &:hover,
   &:focus {
-  fill: var(--accent-cl);
-}}
-
+    fill: var(--accent-cl);
+  }
+}
