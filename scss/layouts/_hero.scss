@@ -7,17 +7,22 @@
 .hero {
   width: 100%;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin-right: auto;
   margin-left: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 200px 0px;
+  padding: 118px 0px;
   color: var(--main-white-cl);
   background-color: var(--dark-bg-cl);
   border: 1px solid var(--accent-cl-dark);
   letter-spacing: 0.06em;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0px;
+    height: 600px;
+  }
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/main-page/hero/hero-bcg-img_sm.jpg);
@@ -75,7 +80,7 @@
   font-weight: 900;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1768px) {
+  @media screen and (min-width: 768px) {
     width: 360px;
   }
   @media screen and (min-width: 1200px) {

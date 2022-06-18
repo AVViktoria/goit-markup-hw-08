@@ -7,21 +7,18 @@
 .projects__list {
   display: block;
   margin-top: 40px;
-  margin-bottom: 60px;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 50%;
     margin-top: 14px;
-    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
     @include display-flex(center);
     margin-left: auto;
     margin-top: 34px;
-    margin-bottom: 94px;
   }
 }
 

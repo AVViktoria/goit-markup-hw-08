@@ -6,11 +6,9 @@
 
 .logo {
   display: block;
-
   padding-top: 24px;
   padding-bottom: 25px;
   color: var(--accent-cl);
-
   font-family: var(--secondary-font);
   font-weight: 700;
   @include fonts(26px, 0.84);

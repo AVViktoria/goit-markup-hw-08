@@ -21,6 +21,11 @@
 
 .address__logo {
   margin-bottom: 20px;
+  padding: 0;
+  margin-right: 0;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .address__list {
