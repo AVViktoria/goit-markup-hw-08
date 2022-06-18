@@ -41,9 +41,6 @@
   box-shadow: var(--main-bcg-shadow);
   transition: opacity var(--main-animation), visibility var(--main-animation);
 
-  @media screen and (min-width: 480px) {
-  }
-
   @media screen and (min-width: 1200px) {
     position: absolute;
     padding: 0;
