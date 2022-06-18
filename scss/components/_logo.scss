@@ -6,7 +6,7 @@
 
 .logo {
   display: block;
-  margin-right: 93px;
+
   padding-top: 24px;
   padding-bottom: 25px;
   color: var(--accent-cl);
@@ -17,9 +17,13 @@
   text-decoration: none;
 
   &__accent-dark {
-  color: var(--accent-cl-dark);
-}
+    color: var(--accent-cl-dark);
+  }
 
   &__accent-white {
-  color: var(--main-white-cl);
-}}
+    color: var(--main-white-cl);
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 93px;
+  }
+}

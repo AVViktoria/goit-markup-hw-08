@@ -37,6 +37,10 @@
 }
 
 .subscribe-form__text {
+  @media screen and (max-width: 498px) {
+    width: auto;
+  }
+
   padding: 15px 15px 15px 16px;
   width: 358px;
   height: 50px;

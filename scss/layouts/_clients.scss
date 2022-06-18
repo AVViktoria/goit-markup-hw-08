@@ -5,13 +5,9 @@
 */
 
 .clients {
-  padding: 0;
+  padding-bottom: 60px;
+  padding-top: 60px;
   background-color: var(--main-white-cl);
-
-  @media screen and (min-width: 480px) {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
 
   @media screen and (min-width: 1200px) {
     padding-bottom: 94px;
@@ -32,16 +28,13 @@
 .clients__list {
   @include display-flex(center, center);
   text-align: center;
+  flex-wrap: wrap;
+  flex-basis: 50%;
 
-  @media screen and (min-width: 480px) {
-    flex-wrap: wrap;
-    flex-basis: 50%;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-basis: 25%;
-  }
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   flex-basis: 25%;
+  // }
 
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
@@ -60,15 +53,13 @@
     border-color: var(--accent-cl);
   }
 
-  @media screen and (min-width: 480px) {
-    width: calc((100% - 4 * 10px) / 2);
-    margin: 10px;
-    &:nth-child(5) {
-      margin-bottom: 0;
-    }
-    &:nth-child(6) {
-      margin-bottom: 0px;
-    }
+  width: calc((100% - 4 * 10px) / 2);
+  margin: 10px;
+  &:nth-child(5) {
+    margin-bottom: 0;
+  }
+  &:nth-child(6) {
+    margin-bottom: 0px;
   }
 
   @media screen and (min-width: 768px) {

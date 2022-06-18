@@ -1,5 +1,5 @@
 body {
-  font-family: var(--main-font); 
+  font-family: var(--main-font);
   @include fonts(14px, 1.4, 0.03em);
   color: var(--main-txt-cl);
   background-color: var(--main-white-cl);
@@ -21,7 +21,7 @@ body.modal-open {
   text-align: center;
 }
 
-.section-subtitle{
+.section-subtitle {
   margin-bottom: 10px;
   color: var(--title-txt-cl);
   font-weight: 700;
